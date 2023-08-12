@@ -47,7 +47,8 @@ build:
   tagPolicy:
     gitCommit: {}
   local:
-    useBuildkit: false
+    useBuildkit: true # needed for ARM64 builds using buildx with docker
+    concurrency: 1
 manifests:
   kustomize:
     paths:
